@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Packages - Exatoura Tourism</title>
+    <link rel="stylesheet" href="nav.css">
+    <style>
+        :root {
+            --gold: #d4af37;
+            --blue: #0c2340;
+            --sand: #f4e9d8;
+            --dark: #1a1a1a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background: white;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .pattern-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://thumbs.dreamstime.com/b/vibrant-seamless-pattern-featuring-ancient-egyptian-hieroglyphs-iconic-symbols-like-ankh-eye-horus-stylized-397570046.jpg') repeat;
+            opacity: 0.05;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--blue) 0%, #1a3a5f 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--gold);
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--blue);
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 80px;
+            height: 4px;
+            background: var(--gold);
+            display: block;
+            margin: 15px auto;
+        }
+
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .package-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .package-card:hover {
+            transform: scale(1.03);
+        }
+
+        .package-img {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .package-content {
+            padding: 25px;
+        }
+
+        .package-content h3 {
+            font-size: 1.5rem;
+            color: var(--blue);
+            margin-bottom: 10px;
+        }
+
+        .package-content p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            font-size: 1.8rem;
+            color: var(--gold);
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: var(--gold);
+            color: var(--dark);
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #c09d2d;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background: var(--blue);
+            color: var(--gold);
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 60px;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .header p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+<meta name="description" content="ExoToura - Egypt tourism platform: tickets and packages, VR tours, accessibility support, volunteers and photography workshops.">
+<link rel="icon" type="image/png" href="../photos/LOGO.png">
+</head>
+
+<body>
+    <div class="pattern-overlay"></div>
+    <header>
+        <input type="checkbox" id="nav-toggle">
+         <nav>
+                <div class="logo">ExoToura</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Company.html">Company</a></li>
+                    <li><a href="disabilty.html">Disability</a></li>
+                    <li><a href="volunteers.html">Volunteer</a></li>
+                    <li><a href="workshop.html">Workshops</a></li>
+                    <li><a href="vr.html">VR</a></li>
+                    <li><a href="library.html">Library</a></li>
+                    <li><a href="about_us.html">About</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="contact.html">Inquire</a></li>
+                    <li><a href="login.html" class="btn btn-secondary"
+                            style="padding: 8px 20px; font-size: 0.8rem;">Login</a></li>
+                </ul>
+            </nav>
+        <label for="nav-toggle" class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </label>
+    </header>
+
+    <section class="header">
+        <div class="container">
+            <h1>All Packages</h1>
+            <p>Explore all our exciting tour packages across Egypt's beautiful destinations</p>
+        </div>
+    </section>
+
+    <section class="packages-section">
+        <div class="container">
+            <h2 class="section-title">All Egypt Tour Packages</h2>
+            <div class="packages-grid">
+                <div class="package-card">
+                    <img src="../photos/pyramids.jpeg" alt="Giza Pyramids" class="package-img">
+                    <div class="package-content">
+                        <h3>Giza Pyramids Experience</h3>
+                        <p>Explore the Great Pyramid of Giza, the Sphinx, and surrounding monuments with our expert guides.</p>
+                        <div class="price">From 8,000 EGP</div>
+                        <a href="book-ticket.html" class="btn">Book Now</a>
+                    </div>
+                </div>
+                
+                <div class="package-card">
+                    <img src="../photos/luxor.jpeg" alt="Luxor" class="package-img">
+                    <div class="package-content">
+                        <h3>Luxor Temples Tour</h3>
+                        <p>Visit the Valley of the Kings, Karnak Temple, and Luxor Temple in this comprehensive historical tour.</p>
+                        <div class="price">From 10,000 EGP</div>
+                        <a href="book-ticket.html" class="btn">Book Now</a>
+                    </div>
+                </div>
+                
+                <div class="package-card">
+                    <img src="../photos/cpcu.png" alt="Nile Cruise" class="package-img">
+                    <div class="package-content">
+                        <h3>Royal Nile Cruise</h3>
+                        <p>Experience the magic of the Nile with our luxury cruise packages including Aswan and Luxor.</p>
+                        <div class="price">From 15,000 EGP</div>
+                        <a href="book-ticket.html" class="btn">Book Now</a>
+                    </div>
+                </div>
+                
+                <div class="package-card">
+                    <img src="../photos/cpsm.png" alt="Red Sea" class="package-img">
+                    <div class="package-content">
+                        <h3>Red Sea Paradise</h3>
+                        <p>Discover the beautiful beaches and coral reefs of Sharm El Sheikh and Hurghada.</p>
+                        <div class="price">From 7,000 EGP</div>
+                        <a href="book-ticket.html" class="btn">Book Now</a>
+                    </div>
+                </div>
+                
+                <div class="package-card">
+                    <img src="../photos/egypt 2.jpg" alt="Alexandria" class="package-img">
+                    <div class="package-content">
+                        <h3>Alexandria Coastal Tour</h3>
+                        <p>Explore the Mediterranean city of Alexandria with its beautiful corniche and historical sites.</p>
+                        <div class="price">From 5,000 EGP</div>
+                        <a href="book-ticket.html" class="btn">Book Now</a>
+                    </div>
+                </div>
+                
+                <div class="package-card">
+                    <img src="../photos/combany photo ka.png" alt="Aswan" class="package-img">
+                    <div class="package-content">
+                        <h3>Aswan Nubian Experience</h3>
+                        <p>Visit the beautiful Aswan with its Nubian culture, temples, and stunning landscapes.</p>
+                        <div class="price">From 9,000 EGP</div>
+                        <a href="book-ticket.html" class="btn">Book Now</a>
+                    </div>
+                </div>
+                
+                <div class="package-card">
+                    <img src="../photos/cpcu.png" alt="Sinai" class="package-img">
+                    <div class="package-content">
+                        <h3>Sinai Mountain Adventure</h3>
+                        <p>Explore the historical Sinai Peninsula including Mount Sinai and St. Catherine's Monastery.</p>
+                        <div class="price">From 12,000 EGP</div>
+                        <a href="book-ticket.html" class="btn">Book Now</a>
+                    </div>
+                </div>
+                
+                <div class="package-card">
+                    <img src="../project/images6.jfif" alt="Fayoum" class="package-img">
+                    <div class="package-content">
+                        <h3>Fayoum Oasis Escape</h3>
+                        <p>Discover the beautiful Fayoum Oasis with its lakes, waterfalls, and natural landscapes.</p>
+                        <div class="price">From 6,000 EGP</div>
+                        <a href="book-ticket.html" class="btn">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© ExoToura Tourism</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+<script src="chatbot.js" defer></script>
+</body>
+</html>

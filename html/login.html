@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="nav.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+        }
+
+        .login-container {
+            max-width: 350px;
+            background: #fff;
+            padding: 30px;
+            margin: 120px auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .login-container h2 {
+            text-align: center;
+            color: #007BFF;
+            margin-bottom: 25px;
+        }
+
+        .login-container input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 15px;
+        }
+
+        .login-container button {
+            width: 100%;
+            padding: 12px;
+            background: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .login-container button:hover {
+            background: #0056b3;
+        }
+
+        .login-container p {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .login-container a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        .login-container a:hover {
+            text-decoration: underline;
+        }
+    </style>
+<meta name="description" content="ExoToura - Egypt tourism platform: tickets and packages, VR tours, accessibility support, volunteers and photography workshops.">
+<link rel="icon" type="image/png" href="../photos/LOGO.png">
+</head>
+
+<body>
+
+    <header>
+        <input type="checkbox" id="nav-toggle">
+        <nav>
+                <div class="logo">ExoToura</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Company.html">Company</a></li>
+                    <li><a href="disabilty.html">Disability</a></li>
+                    <li><a href="volunteers.html">Volunteer</a></li>
+                    <li><a href="workshop.html">Workshops</a></li>
+                    <li><a href="vr.html">VR</a></li>
+                    <li><a href="library.html">Library</a></li>
+                    <li><a href="about_us.html">About</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="contact.html">Inquire</a></li>
+                    <li><a href="login.html" class="btn btn-secondary"
+                            style="padding: 8px 20px; font-size: 0.8rem;">Login</a></li>
+                </ul>
+            </nav>
+        <label for="nav-toggle" class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </label>
+    </header>
+
+
+    <div class="login-container">
+        <h2>Login</h2>
+
+        <form action="index.html">
+            <input type="text" placeholder="Username" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+
+        <p>Don't have an account?
+            <a href="signup.html">Sign up</a>
+        </p>
+    </div>
+
+    <footer>© ExoToura Tourism</footer>
+    <script src="script.js"></script>
+<script src="chatbot.js" defer></script>
+</body>
+
+</html>

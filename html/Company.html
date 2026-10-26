@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exatoura Company - Egyptian Tourism Experience</title>
+    <link rel="stylesheet" href="nav.css">
+    <style>
+        :root {
+            --gold: #d4af37;
+            --blue: #0c2340;
+            --sand: #f4e9d8;
+            --dark: #1a1a1a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background: white;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .pattern-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://thumbs.dreamstime.com/b/vibrant-seamless-pattern-featuring-ancient-egyptian-hieroglyphs-iconic-symbols-like-ankh-eye-horus-stylized-397570046.jpg') repeat;
+            opacity: 0.05;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .company-header {
+            background: linear-gradient(135deg, var(--blue) 0%, #1a3a5f 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .company-header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: var(--gold);
+        }
+
+        .company-header p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--blue);
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 80px;
+            height: 4px;
+            background: var(--gold);
+            display: block;
+            margin: 15px auto;
+        }
+
+        .about-company {
+            background: var(--sand);
+            padding: 60px 0;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 2rem;
+            color: var(--blue);
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .about-image {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .services {
+            padding: 60px 0;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            color: var(--blue);
+            margin-bottom: 15px;
+        }
+
+        .service-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .packages {
+            background: var(--sand);
+            padding: 60px 0;
+        }
+
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .package-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .package-card:hover {
+            transform: scale(1.03);
+        }
+
+        .package-img {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .package-content {
+            padding: 25px;
+        }
+
+        .package-content h3 {
+            font-size: 1.5rem;
+            color: var(--blue);
+            margin-bottom: 10px;
+        }
+
+        .package-content p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            font-size: 1.8rem;
+            color: var(--gold);
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: var(--gold);
+            color: var(--dark);
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #c09d2d;
+            transform: translateY(-2px);
+        }
+
+        .testimonials {
+            padding: 60px 0;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: var(--sand);
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .testimonial-card h4 {
+            color: var(--blue);
+            margin-bottom: 10px;
+        }
+
+        .testimonial-card p {
+            font-style: italic;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        footer {
+            background: var(--blue);
+            color: var(--gold);
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        @media (max-width: 768px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .company-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .company-header p {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+<meta name="description" content="ExoToura - Egypt tourism platform: tickets and packages, VR tours, accessibility support, volunteers and photography workshops.">
+<link rel="icon" type="image/png" href="../photos/LOGO.png">
+</head>
+
+<body>
+    <div class="pattern-overlay"></div>
+
+    <header>
+        <input type="checkbox" id="nav-toggle">
+        <nav>
+                <div class="logo">ExoToura</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Company.html">Company</a></li>
+                    <li><a href="disabilty.html">Disability</a></li>
+                    <li><a href="volunteers.html">Volunteer</a></li>
+                    <li><a href="workshop.html">Workshops</a></li>
+                    <li><a href="vr.html">VR</a></li>
+                    <li><a href="library.html">Library</a></li>
+                    <li><a href="about_us.html">About</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="contact.html">Inquire</a></li>
+                    <li><a href="login.html" class="btn btn-secondary"
+                            style="padding: 8px 20px; font-size: 0.8rem;">Login</a></li>
+                </ul>
+            </nav>
+        <label for="nav-toggle" class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </label>
+    </header>
+
+    <section class="company-header">
+        <div class="container">
+            <h1>Exatoura Tourism Company</h1>
+            <p>Your trusted partner for authentic Egyptian experiences</p>
+        </div>
+    </section>
+
+    <section class="about-company">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>About Our Company</h3>
+                    <p>Exatoura is a premier Egyptian tourism company dedicated to providing exceptional travel
+                        experiences that showcase the rich heritage and beauty of Egypt.</p>
+                    <p>Founded with the vision of making Egyptian tourism accessible to everyone, we combine traditional
+                        travel with innovative technology solutions to create memorable experiences for our guests.</p>
+                    <p>Our team of expert guides and travel specialists are passionate about sharing the wonders of
+                        Egypt, from ancient monuments to cultural experiences that will stay with you forever.</p>
+                    <p>We pride ourselves on our commitment to sustainability, cultural preservation, and community
+                        engagement, ensuring that tourism benefits both visitors and local communities.</p>
+                </div>
+                <div class="about-image">
+                    <img src="../photos/t.jpg" alt="Egypt Tourism Experience">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🏛️</div>
+                    <h3>Historical Tours</h3>
+                    <p>Guided tours of ancient pyramids, temples, and historical sites with expert Egyptologists who
+                        bring history to life.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🌊</div>
+                    <h3>Nile Cruises</h3>
+                    <p>Magical journeys along the Nile with luxury accommodations and breathtaking views of ancient
+                        landscapes.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏖️</div>
+                    <h3>Beach Getaways</h3>
+                    <p>Relaxing experiences in Egypt's beautiful Red Sea destinations with pristine beaches and coral
+                        reefs.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">👥</div>
+                    <h3>Accessibility Services</h3>
+                    <p>Specialized tours and services for travelers with disabilities, ensuring everyone can enjoy
+                        Egypt's wonders.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📸</div>
+                    <h3>Photography Workshops</h3>
+                    <p>Learn to capture Egypt's beauty with our specialized photography workshops across all
+                        governorates.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">👓</div>
+                    <h3>Virtual Reality Tours</h3>
+                    <p>Experience Egypt's monuments and landscapes from anywhere with our innovative VR technology.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="packages">
+        <div class="container">
+            <h2 class="section-title">Popular Packages</h2>
+            <div style="text-align: center; margin-top: 30px; margin-bottom: 30px; margin-right: 0px;">
+                <a href="all-packages.html" class="btn">See All Places</a>
+            </div>
+            <div class="packages-grid">
+                <div class="package-card">
+                    <img src="../photos/pyramids.jpeg" alt="Giza Pyramids" class="package-img">
+                    <div class="package-content">
+                        <h3>Giza Pyramids Experience</h3>
+                        <p>Explore the Great Pyramid of Giza, the Sphinx, and surrounding monuments with our expert
+                            guides.</p>
+                        <div class="price">From 8,000 EGP</div>
+                        <a href="book-ticket.html" class="btn">Book Now</a>
+                    </div>
+                </div>
+                <div class="package-card">
+                    <img src="../photos/luxor.jpeg" alt="Luxor" class="package-img">
+                    <div class="package-content">
+                        <h3>Luxor Temples Tour</h3>
+                        <p>Visit the Valley of the Kings, Karnak Temple, and Luxor Temple in this comprehensive
+                            historical tour.</p>
+                        <div class="price">From 10,000 EGP</div>
+                        <a href="book-ticket.html" class="btn">Book Now</a>
+                    </div>
+                </div>
+                <div class="package-card">
+                    <img src="../photos/cpcu.png" alt="Nile Cruise" class="package-img">
+                    <div class="package-content">
+                        <h3>Royal Nile Cruise</h3>
+                        <p>Experience the magic of the Nile with our luxury cruise packages including Aswan and Luxor.
+                        </p>
+                        <div class="price">From 15,000 EGP</div>
+                        <a href="book-ticket.html" class="btn">Book Now</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Clients Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <h4>M.Ahmed</h4>
+                    <p>"An unforgettable experience! The tour was well-organized, and the guides were knowledgeable.
+                        Egypt's history came alive!"</p>
+                </div>
+                <div class="testimonial-card">
+                    <h4>L.Sarah</h4>
+                    <p>"The Nile cruise was magical! Stunning views, luxurious accommodations, and delicious food.
+                        Highly recommend!"</p>
+                </div>
+                <div class="testimonial-card">
+                    <h4>D.John</h4>
+                    <p>"Visiting the Pyramids and temples was a dream come true. The cultural immersion and hospitality
+                        were exceptional."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© ExoToura Tourism </p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+<script src="chatbot.js" defer></script>
+</body>
+experiences
+</html>

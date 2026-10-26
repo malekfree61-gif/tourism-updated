@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience Egypt | The Cradle of Civilization</title>
+    <meta name="description"
+        content="Discover the wonders of Egypt. From the Pyramids of Giza to the pristine beaches of the Red Sea. Plan your unforgettable journey today.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="nav.css">
+
+<style>
+    /* Modern Tourism Project - The Coolest Design */
+:root {
+    --primary-color: #002147;
+    --accent-color: #D4AF37;
+    --accent-glow: rgba(212, 175, 55, 0.5);
+    --text-light: #f5f1e6;
+    --text-dark: #1a1a1a;
+    --bg-light: #f9f9f9;
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Lato', sans-serif;
+    --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Utilities */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.text-gold {
+    color: var(--accent-color);
+}
+
+.btn {
+    display: inline-block;
+    padding: 16px 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: var(--accent-color);
+    color: var(--primary-color);
+    clip-path: polygon(10% 0, 100% 0, 100% 80%, 90% 100%, 0% 100%, 0% 20%);
+}
+
+.btn-primary:hover {
+    background: white;
+    box-shadow: 0 0 20px var(--accent-glow);
+    transform: translateY(-3px);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+}
+
+.btn-secondary:hover {
+    background: white;
+    color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('../photos/home2.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    position: relative;
+    color: white;
+}
+
+.hero-content {
+    max-width: 800px;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 5rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s forwards 0.5s;
+    color: white;
+}
+
+.hero p {
+    font-size: 1.4rem;
+    margin-bottom: 40px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s forwards 0.8s;
+}
+
+.hero-buttons {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s forwards 1.1s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* About Section */
+.about {
+    padding: 100px 0;
+    background: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.about-text h2 {
+    font-size: 3.5rem;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.about-text h2::before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: -20px;
+    width: 60px;
+    height: 60px;
+    background: var(--accent-glow);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.feature-list li {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.about-image {
+    position: relative;
+}
+
+.about-image img {
+    border-radius: 30px 0 30px 0;
+    box-shadow: 20px 20px 0 var(--accent-glow);
+    transition: var(--transition);
+}
+
+.about-image:hover img {
+    transform: scale(1.02);
+    box-shadow: 10px 10px 0 var(--accent-color);
+}
+
+/* Destinations - 3D Cards */
+.destinations {
+    padding: 100px 0;
+    background: #f0f2f5;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-header h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.destination-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    perspective: 1000px;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+    transform-style: preserve-3d;
+}
+
+.card:hover {
+    transform: translateY(-10px) rotateX(2deg);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.card-image {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.card-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+    opacity: 0.6;
+}
+
+.card-content {
+    padding: 30px;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: 700;
+    color: var(--accent-color);
+    margin-top: 15px;
+}
+
+.card-link:hover {
+    gap: 10px;
+}
+
+/* Why Choose Us */
+.why-us {
+    padding: 100px 0;
+    background: var(--primary-color);
+    color: white;
+    text-align: center;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px 20px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: var(--transition);
+}
+
+.feature-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-5px);
+    border-color: var(--accent-color);
+}
+
+.feature-card h3 {
+    color: var(--accent-color);
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+/* Footer */
+footer {
+    background: #00152e;
+    color: rgba(255, 255, 255, 0.7);
+    padding: 80px 0 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 50px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer h4 {
+    color: var(--accent-color);
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    font-size: 0.9rem;
+}
+
+/* Hamburger */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 5px 0;
+    transition: var(--transition);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        right: -100%;
+        top: 0;
+        height: 100vh;
+        width: 70%;
+        background: var(--primary-color);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: var(--transition);
+        z-index: 999;
+    }
+
+    .nav-active {
+        right: 0;
+    }
+
+    .hamburger {
+        display: block;
+        z-index: 1000;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+/* Scroll Reveal classes */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+/* Form Styles */
+.form-container {
+    padding: 120px 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../photos/home2.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 50px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.glass-card h2 {
+    color: white;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 1rem;
+    outline: none;
+    transition: var(--transition);
+}
+
+.form-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.form-input:focus {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: var(--accent-color);
+}
+
+.form-link {
+    display: block;
+    margin-top: 20px;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.form-link a {
+    color: var(--accent-color);
+    font-weight: bold;
+}
+</style>
+<link rel="icon" type="image/png" href="../photos/LOGO.png">
+</head>
+
+<body class="home">
+
+    <header>
+        <input type="checkbox" id="nav-toggle">
+        <nav>
+            <div class="logo">ExoToura</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Company.html">Company</a></li>
+                <li><a href="disabilty.html">Disability</a></li>
+                <li><a href="volunteers.html">Volunteer</a></li>
+                <li><a href="workshop.html">Workshops</a></li>
+                <li><a href="vr.html">VR</a></li>
+                <li><a href="library.html">Library</a></li>
+                <li><a href="about_us.html">About</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="contact.html">Inquire</a></li>
+                <li><a href="login.html" class="btn btn-secondary"
+                        style="padding: 8px 20px; font-size: 0.8rem;">Login</a></li>
+            </ul>
+        </nav>
+        <label for="nav-toggle" class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </label>
+    </header>
+
+    <section id="hero" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1 class="fade-in">Explore <span class="text-gold">Egypt</span><br>The Eternal Land</h1>
+            <p class="fade-in delay-1">Walk in the footsteps of kings, endless golden sands, and the life-giving Nile.
+                Your journey into history begins here.</p>
+            <div class="hero-buttons">
+                <a href="project.html" class="btn btn-primary">Explore Destinations</a>
+                <a href="login.html" class="btn btn-secondary">Join The Journey</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container about-grid">
+            <div class="about-text reveal">
+                <h2>Where History <br>Comes Alive</h2>
+                <p>Egypt is more than a destination; it's a journey through time. Marvel at architectural feats that
+                    defy logic, and immerse yourself in a culture as deep as the Nile itself.</p>
+                <ul class="feature-list">
+                    <li><span class="text-gold">🏛️</span> 7,000 Years of History</li>
+                    <li><span class="text-gold">🌊</span> Pristine Red Sea Beaches</li>
+                    <li><span class="text-gold">🏜️</span> Majestic Desert Safaris</li>
+                </ul>
+                <a href="about_us.html" class="card-link" style="margin-top: 20px; display: inline-block;">Read Our
+                    Story →</a>
+            </div>
+            <div class="about-image reveal">
+                <img src="../photos/egypt.jpeg" alt="Majestic View of Egypt">
+            </div>
+        </div>
+    </section>
+
+    <section id="destinations" class="destinations">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Top Destinations</h2>
+                <p>Curated experiences for the discerning traveler.</p>
+            </div>
+
+            <div class="destination-grid">
+                <!-- Card 1 -->
+                <div class="card reveal">
+                    <div class="card-image" style="background-image:url('../photos/pyramids.jpeg');"></div>
+                    <div class="card-content">
+                        <h3>The Great Pyramids</h3>
+                        <p>Giza, Cairo</p>
+                        <p style="font-size: 0.9rem; color: #666; margin-bottom: 15px;">Experience the last surviving
+                            wonder of the ancient world.</p>
+                        <a href="project.html" class="card-link">Discover Details →</a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card reveal">
+                    <div class="card-image" style="background-image:url('../photos/luxor.jpeg');"></div>
+                    <div class="card-content">
+                        <h3>Valley of the Kings</h3>
+                        <p>Luxor</p>
+                        <p style="font-size: 0.9rem; color: #666; margin-bottom: 15px;">Walk through the royal tombs of
+                            ancient pharaohs.</p>
+                        <a href="project.html" class="card-link">Discover Details →</a>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card reveal">
+                    <div class="card-image" style="background-image:url('../photos/phiala temple.jpeg');"></div>
+                    <div class="card-content">
+                        <h3>Philae Temple</h3>
+                        <p>Aswan</p>
+                        <p style="font-size: 0.9rem; color: #666; margin-bottom: 15px;">The pearl of the Nile, dedicated
+                            to the goddess Isis.</p>
+                        <a href="project.html" class="card-link">Discover Details →</a>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="card reveal">
+                    <div class="card-image" style="background-image:url('../photos/coral reefs.png');"></div>
+                    <div class="card-content">
+                        <h3>Red Sea Coral Reefs</h3>
+                        <p>Sharm El Sheikh</p>
+                        <p style="font-size: 0.9rem; color: #666; margin-bottom: 15px;">Dive into a world of vibrant
+                            marine life.</p>
+                        <a href="project.html" class="card-link">Discover Details →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-us">
+        <div class="container reveal">
+            <h2>Why Choose Us?</h2>
+            <p style="opacity: 0.8;">We craft unforgettable memories with excellence.</p>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Safety First</h3>
+                    <p>Your safety is our absolute priority with verified guides.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Expert Guides</h3>
+                    <p>Licensed Egyptologists who bring history to life.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Best Value</h3>
+                    <p>Premium experiences at competitive market rates.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>24/7 Support</h3>
+                    <p>Always here for you, from arrival to departure.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-grid">
+            <div>
+                <h4>Experience Egypt</h4>
+                <p>Unveiling history, one journey at a time. We are dedicated to showing you the true magic of the
+                    cradle of civilization.</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li style="margin-bottom: 10px;"><a href="index.html">Home</a></li>
+                    <li style="margin-bottom: 10px;"><a href="project.html">Destinations</a></li>
+                    <li style="margin-bottom: 10px;"><a href="about_us.html">About Us</a></li>
+                    <li style="margin-bottom: 10px;"><a href="login.html">Login</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contact Us</h4>
+                <p style="margin-bottom: 10px;">info@visit-egypt.com</p>
+                <p>+20 102 488 6690</p>
+                <p style="margin-top: 20px;">Cairo, Egypt</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 ExoToura Tourism. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+<script src="chatbot.js" defer></script>
+</body>
+
+</html>

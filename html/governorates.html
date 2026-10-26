@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Governorate Details</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="nav.css">
+    <style>
+      * {
+        box-sizing: border-box;
+        transition: all 0.3s ease;
+      }
+
+      body {
+        font-family: "Segoe UI", sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(180deg, #e8f9f3, #fff);
+        color: #1e2b27;
+      }
+
+      header {
+        background: linear-gradient(90deg, #046957, #0b9d85);
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        letter-spacing: 0.6px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+      }
+
+      header h2 {
+        margin: 0;
+        font-size: 1.6rem;
+      }
+
+      /* === Hero Section === */
+      .hero {
+        position: relative;
+        width: 100%;
+        height: 350px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 0 0 25px 25px;
+        overflow: hidden;
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.35);
+      }
+
+      .hero h1 {
+        position: absolute;
+        bottom: 30px;
+        left: 40px;
+        color: #fff;
+        z-index: 2;
+        font-size: 2.4rem;
+        font-weight: 600;
+        text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      }
+
+      main {
+        max-width: 1100px;
+        margin: 40px auto;
+        background: white;
+        padding: 40px;
+        border-radius: 18px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+      }
+
+      h2 {
+        color: #046957;
+        margin-bottom: 10px;
+        font-size: 1.4rem;
+        display: inline-block;
+        border-bottom: 3px solid #f3c969;
+        padding-bottom: 4px;
+      }
+
+      p {
+        line-height: 1.8;
+        font-size: 1.05rem;
+        color: #333;
+      }
+
+      .section {
+        margin-bottom: 35px;
+        padding: 20px;
+        border-left: 5px solid #0b9d85;
+        background: #f9fefc;
+        border-radius: 10px;
+      }
+
+      .section:hover {
+        background: #e6f8f2;
+        transform: translateY(-3px);
+      }
+
+      ul {
+        padding-left: 20px;
+        margin: 10px 0;
+        list-style-type: square;
+        color: #444;
+      }
+
+      li {
+        background: #f7fefb;
+        margin: 8px 0;
+        padding: 8px 14px;
+        border-radius: 10px;
+        border: 1px solid #e0f1eb;
+      }
+
+      li:hover {
+        background: #dff6ed;
+        border-color: #b5e8d3;
+      }
+
+      .back {
+        display: inline-block;
+        margin-top: 30px;
+        padding: 12px 24px;
+        background: linear-gradient(90deg, #0b9d85, #046957);
+        color: white;
+        border-radius: 10px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1rem;
+        box-shadow: 0 4px 12px rgba(4, 105, 87, 0.3);
+      }
+
+      .back:hover {
+        background: linear-gradient(90deg, #0cc19c, #05876d);
+        transform: scale(1.05);
+      }
+
+      /* === Animations === */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      main,
+      .hero h1,
+      header {
+        animation: fadeInUp 1s ease;
+      }
+
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 1.8rem;
+          left: 20px;
+        }
+
+        main {
+          padding: 25px;
+          margin: 20px;
+        }
+
+        .section {
+          padding: 15px;
+        }
+      }
+    </style>
+  <meta name="description" content="ExoToura - Egypt tourism platform: tickets and packages, VR tours, accessibility support, volunteers and photography workshops.">
+<link rel="icon" type="image/png" href="../photos/LOGO.png">
+</head>
+  <body>
+     <header>
+        <input type="checkbox" id="nav-toggle">
+        <nav>
+            <div class="logo">ExoToura</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Company.html">Company</a></li>
+                <li><a href="disabilty.html">Disability</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="team.html">Team Work</a></li>
+                <li><a href="volunteers.html">Volunteers</a></li>
+                <li><a href="vr.html">VR</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="../project/workshop.html">Workshop</a></li>
+                <li><a href="library.html">Library</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+        <label for="nav-toggle" class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </label>
+    </header>
+     
+      <h2>Egypt Governorate Explorer</h2>
+  
+
+    <div
+      class="hero"
+      id="hero"
+      style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/6a/Luxor_Temple_2.jpg');"
+    >
+      <h1 id="govName">Governorate Name</h1>
+    </div>
+
+    <main>
+      <div id="content">Loading...</div>
+      <a href="project.html" class="back">← Back to Map</a>
+    </main>
+
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const name = params.get("name");
+
+      fetch("data.json")
+        .then((res) => res.json())
+        .then((data) => {
+          const gov = data.governorates.find((g) => g.name === name);
+          if (!gov) {
+            document.getElementById("content").innerHTML =
+              "<p>Governorate not found.</p>";
+            return;
+          }
+
+          document.title = gov.name + " - Egypt Governorate";
+          document.getElementById("govName").textContent = gov.name;
+          document.getElementById("hero").style.backgroundImage = `url(${gov.image || '../photos/egypt.jpeg'})`;
+
+          document.getElementById("content").innerHTML = `
+            <div class="section">
+              <h2>About ${gov.name}</h2>
+              <p>${gov.description}</p>
+            </div>
+
+            <div class="section">
+              <h2>Main Attractions</h2>
+              <ul>${gov.attractions.map((a) => `<li>${a}</li>`).join("")}</ul>
+            </div>
+
+            <div class="section">
+              <h2>Popular Hangouts</h2>
+              <ul>${gov.hangouts.map((a) => `<li>${a}</li>`).join("")}</ul>
+            </div>
+
+        
+          `;
+        });
+    </script>
+    <script src="script.js"></script>
+  <script src="chatbot.js" defer></script>
+</body>
+</html>

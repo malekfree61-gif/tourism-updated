@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <title>Exotoura Volunteer</title>
+    <link rel="stylesheet" href="volunteer.css" />
+    <link rel="stylesheet" href="nav.css">
+    
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "XZrj0LNYgpA5Ysevl",
+        });
+      })();
+    </script>
+  <meta name="description" content="ExoToura - Egypt tourism platform: tickets and packages, VR tours, accessibility support, volunteers and photography workshops.">
+<link rel="icon" type="image/png" href="../photos/LOGO.png">
+</head>
+  <body>
+  <header>
+    <input type="checkbox" id="nav-toggle">
+    <nav>
+                <div class="logo">ExoToura</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Company.html">Company</a></li>
+                    <li><a href="disabilty.html">Disability</a></li>
+                    <li><a href="volunteers.html">Volunteer</a></li>
+                    <li><a href="workshop.html">Workshops</a></li>
+                    <li><a href="vr.html">VR</a></li>
+                    <li><a href="library.html">Library</a></li>
+                    <li><a href="about_us.html">About</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="contact.html">Inquire</a></li>
+                    <li><a href="login.html" class="btn btn-secondary"
+                            style="padding: 8px 20px; font-size: 0.8rem;">Login</a></li>
+                </ul>
+            </nav>
+    <label for="nav-toggle" class="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </label>
+  </header>
+    <div class="container">
+    
+      <h1>Volunteer With Exotoura</h1>
+      <p class="intro">
+        Join Exotoura as a volunteer and help tourists explore Egypt through
+        workshops and cultural experiences.
+      </p>
+
+      <!-- Volunteer Cards -->
+      <div class="card">     
+         <span class="card-number">1</span>
+        <h2>Tour Guide Volunteer</h2>
+        <p><strong>Role:</strong> Guide visitors during workshops and tours.</p>
+        <p><strong>Skills Needed:</strong> Communication, Local Knowledge</p>
+        <p><strong>Location:</strong> All Egyptian Governorates</p>
+        <p><strong>Duration:</strong> Flexible Hours</p>
+      </div>
+
+      <div class="card">
+          <span class="card-number">2</span>
+        <h2>Photography Volunteer</h2>
+        <p>
+          <strong>Role:</strong> Capture workshop moments and tourist
+          experiences.
+        </p>
+        <p><strong>Skills Needed:</strong> Photography, Creativity</p>
+        <p><strong>Location:</strong> Tourist Areas</p>
+        <p><strong>Duration:</strong> 3 - 5 Hours</p>
+      </div>
+
+      <div class="card">
+          <span class="card-number">3</span>
+        <h2>Workshop Assistant</h2>
+        <p>
+          <strong>Role:</strong> Help organize and manage tourism workshops.
+        </p>
+        <p><strong>Skills Needed:</strong> Organization, Teamwork</p>
+        <p><strong>Location:</strong> Workshop Locations</p>
+        <p><strong>Duration:</strong> 2 - 4 Hours</p>
+      </div>
+      <div class="request-box">
+        <h2>Request a Volunteer</h2>
+        <p>
+          If you need a volunteer for your event or workshop, fill out the form
+          below.
+        </p>
+
+        <!-- زر فتح الفورم -->
+        <label for="toggleForm" class="request-btn">Request a Volunteer</label>
+
+        <!-- الفورم مخفي -->
+        <input type="checkbox" id="toggleForm" style="display: none" />
+        <div class="volunteer-form">
+          <h3>Volunteer Request Form</h3>
+          <form id="contact-form">
+            <label for="name">Full Name:</label>
+            <input
+              type="text"
+              id="name"
+              placeholder="Enter your full name"
+              required
+            />
+
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter your email"
+              required
+            />
+
+            <label for="governorate">Governorate:</label>
+            <input
+              type="text"
+              id="governorate"
+              placeholder="Enter your governorate"
+              required
+            />
+
+            <label for="role">Select Volunteer Role:</label>
+            <select id="role" required>
+              <option value="">Choose a role</option>
+              <option value="tourguide">Tour Guide</option>
+              <option value="photography">Photography</option>
+              <option value="assistant">Workshop Assistant</option>
+            </select>
+
+            <label for="message">Message / Details:</label>
+            <textarea
+              id="message"
+              placeholder="Enter any extra details..."
+              rows="4"
+            ></textarea>
+
+            <button type="submit">Submit Request</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <footer>© ExoToura Tourism</footer>
+    <script>
+
+    
+    document.getElementById("contact-form").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  let params = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    subject: "Volunteer request: " + document.getElementById("role").value + " - " + document.getElementById("governorate").value,
+    message: document.getElementById("message").value,
+  };
+
+  emailjs.send("service_v20ie6j", "template_zsc2uqb", params)
+    .then(function() {
+      alert("Email sent successfully ✅");
+    }, function(error) {
+      alert("Error ❌");
+      console.log(error);
+    });
+});
+</script>
+<script src="script.js"></script>
+  <script src="chatbot.js" defer></script>
+</body>
+</html>

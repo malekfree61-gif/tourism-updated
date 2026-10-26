@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <title>Egypt Tourism Ticket Booking</title>
+    <link rel="stylesheet" href="nav.css" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, Tahoma, sans-serif;
+        background: #f2f4f6;
+        margin: 0;
+        padding: 0;
+        color: #333;
+      }
+
+      header {
+        background: #2f3e46;
+        color: #fff;
+        padding: 30px 20px;
+        text-align: center;
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 36px;
+      }
+
+      header p {
+        margin-top: 10px;
+        font-size: 18px;
+        opacity: 0.9;
+      }
+
+      .container {
+        max-width: 1100px;
+        margin: 40px auto;
+        background: #ffffff;
+        padding: 30px;
+        border-radius: 18px;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+      }
+
+      h2 {
+        margin-bottom: 20px;
+        color: #354f52;
+        border-left: 5px solid #84a98c;
+        padding-left: 10px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: center;
+        margin-bottom: 40px;
+        border-radius: 12px;
+        overflow: hidden;
+      }
+
+      th,
+      td {
+        padding: 14px;
+        border-bottom: 1px solid #eee;
+      }
+
+      th {
+        background: #52796f;
+        color: #fff;
+        font-size: 15px;
+      }
+
+      tr:hover td {
+        background: #f1f8f6;
+      }
+
+      .form-group {
+        margin-bottom: 18px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 6px;
+        font-weight: bold;
+      }
+
+      input,
+      select {
+        width: 100%;
+        padding: 12px;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        font-size: 15px;
+      }
+
+      button {
+        width: 100%;
+        background: #52796f;
+        color: #fff;
+        border: none;
+        padding: 15px;
+        font-size: 17px;
+        border-radius: 10px;
+        cursor: pointer;
+        margin-top: 15px;
+      }
+
+      button:hover {
+        background: #354f52;
+      }
+
+      .ticket {
+        margin-top: 35px;
+        padding: 25px;
+        border-radius: 16px;
+        background: #eef6f5;
+        display: none;
+      }
+
+      footer {
+        text-align: center;
+        color: #fff;
+        padding: 20px;
+        font-size: 14px;
+        background: #2f3e46;
+      }
+    </style>
+  <meta name="description" content="ExoToura - Egypt tourism platform: tickets and packages, VR tours, accessibility support, volunteers and photography workshops.">
+<link rel="icon" type="image/png" href="../photos/LOGO.png">
+</head>
+
+  <body>
+   <header>
+        <input type="checkbox" id="nav-toggle">
+        <nav>
+            <div class="logo">ExoToura</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Company.html">Company</a></li>
+                <li><a href="disabilty.html">Disability</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="team.html">Team Work</a></li>
+                <li><a href="volunteers.html">Volunteers</a></li>
+                <li><a href="vr.html">VR</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="../project/workshop.html">Workshop</a></li>
+                <li><a href="library.html">Library</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+        <label for="nav-toggle" class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </label>
+    <h1 style="text-align:center">🇪🇬 Egypt Tourism Ticket Booking</h1>
+      <p>Discover Egypt and book your trip easily</p>
+    </header>
+
+    <div class="container">
+      <h2>Ticket Prices by Tourist Origin</h2>
+
+      <table>
+        <tr>
+          <th>Governorate</th>
+          <th>Egyptian</th>
+          <th>Gulf</th>
+          <th>Europe</th>
+          <th>USA</th>
+        </tr>
+        <tr>
+          <td>Cairo</td>
+          <td>200</td>
+          <td>260</td>
+          <td>320</td>
+          <td>400</td>
+        </tr>
+        <tr>
+          <td>Giza</td>
+          <td>220</td>
+          <td>286</td>
+          <td>352</td>
+          <td>440</td>
+        </tr>
+        <tr>
+          <td>Alexandria</td>
+          <td>250</td>
+          <td>325</td>
+          <td>400</td>
+          <td>500</td>
+        </tr>
+        <tr>
+          <td>Matrouh</td>
+          <td>480</td>
+          <td>624</td>
+          <td>768</td>
+          <td>960</td>
+        </tr>
+        <tr>
+          <td>Red Sea</td>
+          <td>550</td>
+          <td>715</td>
+          <td>880</td>
+          <td>1100</td>
+        </tr>
+        <tr>
+          <td>South Sinai</td>
+          <td>600</td>
+          <td>780</td>
+          <td>960</td>
+          <td>1200</td>
+        </tr>
+        <tr>
+          <td>North Sinai</td>
+          <td>500</td>
+          <td>650</td>
+          <td>800</td>
+          <td>1000</td>
+        </tr>
+        <tr>
+          <td>Aswan</td>
+          <td>500</td>
+          <td>650</td>
+          <td>800</td>
+          <td>1000</td>
+        </tr>
+        <tr>
+          <td>Luxor</td>
+          <td>450</td>
+          <td>585</td>
+          <td>720</td>
+          <td>900</td>
+        </tr>
+        <tr>
+          <td>Minya</td>
+          <td>320</td>
+          <td>416</td>
+          <td>512</td>
+          <td>640</td>
+        </tr>
+        <tr>
+          <td>Fayoum</td>
+          <td>280</td>
+          <td>364</td>
+          <td>448</td>
+          <td>560</td>
+        </tr>
+      </table>
+
+      <h2>Book Your Trip</h2>
+
+      <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" id="name" placeholder="Enter your full name" />
+      </div>
+
+      <div class="form-group">
+        <label>Tourist Origin</label>
+        <select id="origin">
+          <option value="Egypt">Egypt</option>
+          <option value="Gulf">Gulf</option>
+          <option value="Europe">Europe</option>
+          <option value="USA">USA</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Destination Governorate</label>
+        <select id="destination">
+          <option>Cairo</option>
+          <option>Giza</option>
+          <option>Alexandria</option>
+          <option>Matrouh</option>
+          <option>Red Sea</option>
+          <option>South Sinai</option>
+          <option>North Sinai</option>
+          <option>Aswan</option>
+          <option>Luxor</option>
+          <option>Minya</option>
+          <option>Fayoum</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Trip Date</label>
+        <input type="date" id="date" />
+      </div>
+
+      <div class="form-group">
+        <label>Number of Tickets</label>
+        <input type="number" id="tickets" value="1" min="1" />
+      </div>
+
+      <button onclick="bookTicket()">Confirm Booking</button>
+
+      <div class="ticket" id="ticket">
+        <h3>Ticket Details</h3>
+        <p id="ticketInfo"></p>
+      </div>
+    </div>
+
+    <footer>© 2026 | Egypt Tourism Booking Platform</footer>
+
+    <script>
+      const basePrices = {
+        Cairo: 200,
+        Giza: 220,
+        Alexandria: 250,
+        Matrouh: 480,
+        "Red Sea": 550,
+        "South Sinai": 600,
+        "North Sinai": 500,
+        Aswan: 500,
+        Luxor: 450,
+        Minya: 320,
+        Fayoum: 280,
+      };
+
+      const countryMultiplier = {
+        Egypt: 1,
+        Gulf: 1.3,
+        Europe: 1.6,
+        USA: 2,
+      };
+
+      function bookTicket() {
+        const name = document.getElementById("name").value.trim();
+        const origin = document.getElementById("origin").value;
+        const destination = document.getElementById("destination").value;
+        const date = document.getElementById("date").value;
+        const tickets = Number(document.getElementById("tickets").value);
+
+        if (!name || !date) {
+          alert("Please complete all required fields");
+          return;
+        }
+
+        const price = Math.round(
+          basePrices[destination] * countryMultiplier[origin],
+        );
+        const total = price * tickets;
+
+        document.getElementById("ticketInfo").innerHTML = `
+      Name: <strong>${name}</strong><br>
+      Destination: ${destination}<br>
+      Trip Date: ${date}<br>
+      Tickets: ${tickets}<br>
+      Ticket Price: ${price} EGP<br>
+      <strong>Total: ${total} EGP</strong>
+    `;
+
+        document.getElementById("ticket").style.display = "block";
+      }
+    </script>
+    <script src="script.js"></script>
+    <footer>© ExoToura Tourism</footer>
+  <script src="chatbot.js" defer></script>
+</body>
+</html>

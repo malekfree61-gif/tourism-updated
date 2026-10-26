@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Interactive Map of Egypt</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="nav.css">
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", sans-serif;
+        background: #f5fbff;
+        direction: ltr;
+      }
+      h1 {
+        text-align: center;
+        color: #046957;
+        margin: 20px 0;
+      }
+      #map {
+        width: 100%;
+        height: 600px;
+        border-radius: 10px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  <meta name="description" content="ExoToura - Egypt tourism platform: tickets and packages, VR tours, accessibility support, volunteers and photography workshops.">
+<link rel="icon" type="image/png" href="../photos/LOGO.png">
+</head>
+  <body>
+    <header>
+        <input type="checkbox" id="nav-toggle">
+         <nav>
+                <div class="logo">ExoToura</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Company.html">Company</a></li>
+                    <li><a href="disabilty.html">Disability</a></li>
+                    <li><a href="volunteers.html">Volunteer</a></li>
+                    <li><a href="workshop.html">Workshops</a></li>
+                    <li><a href="vr.html">VR</a></li>
+                    <li><a href="library.html">Library</a></li>
+                    <li><a href="about_us.html">About</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="contact.html">Inquire</a></li>
+                    <li><a href="login.html" class="btn btn-secondary"
+                            style="padding: 8px 20px; font-size: 0.8rem;">Login</a></li>
+                </ul>
+            </nav>
+        <label for="nav-toggle" class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </label>
+    </header>
+    <h1>Interactive Map of Egypt</h1>
+    <div id="map"></div>
+
+    <script>
+      function initMap() {
+        const egyptCenter = { lat: 26.8206, lng: 30.8025 };
+
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 6,
+          center: egyptCenter,
+        });
+
+        // Fetch governorates data from JSON
+        fetch("data.json")
+          .then((response) => response.json())
+          .then((data) => {
+            data.governorates.forEach((gov) => {
+              const marker = new google.maps.Marker({
+                position: { lat: gov.lat, lng: gov.lng },
+                map,
+                title: gov.name,
+              });
+
+              const infoWindow = new google.maps.InfoWindow({
+                content: `<div style='font-family:Segoe UI'><strong>${gov.name}</strong><br>${gov.shortInfo}</div>`,
+              });
+
+              marker.addListener("click", () => {
+                window.location.href = `governorates.html?name=${encodeURIComponent(
+                  gov.name
+                )}`;
+              });
+
+              marker.addListener("mouseover", () => {
+                infoWindow.open(map, marker);
+              });
+              marker.addListener("mouseout", () => {
+                infoWindow.close();
+              });
+            });
+          });
+      }
+    </script>
+
+    <script
+      async
+      defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmKpWuEEZSVZsjDt-z5gSO0meFzpzKLM8&callback=initMap"
+
+    ></script>
+    <footer>© ExoToura Tourism</footer>
+    <script src="script.js"></script>
+  <script src="chatbot.js" defer></script>
+</body>
+</html>

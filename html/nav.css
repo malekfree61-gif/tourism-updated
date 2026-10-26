@@ -1,0 +1,192 @@
+/* ===== NAVBAR STYLES ===== */
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #002147;
+    --accent-color: #D4AF37;
+    --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    --font-heading: 'Playfair Display', serif;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 20px 0;
+    transition: var(--transition);
+}
+
+header.scrolled {
+    background: rgba(0, 33, 71, 0.85);
+    backdrop-filter: blur(10px);
+    padding: 10px 0;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: rgb(214, 182, 3);
+    font-family: var(--font-heading);
+    white-space: nowrap;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.95rem;
+    position: relative;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--accent-color);
+    transition: var(--transition);
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    padding: 1rem;
+    margin-right: 1rem;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+#nav-toggle {
+    display: none;
+}
+
+#nav-toggle:checked ~ .nav-links {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(139, 107, 35, 0.95);
+    padding: 0;
+}
+
+#nav-toggle:checked ~ .hamburger .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+#nav-toggle:checked ~ .hamburger .bar:nth-child(2) {
+    opacity: 0;
+}
+
+#nav-toggle:checked ~ .hamburger .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+    nav ul {
+        padding: 0.5rem 0;
+    }
+
+    nav a {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(139, 107, 35, 0.98);
+        padding: 0;
+        gap: 0;
+    }
+
+    #nav-toggle:checked ~ .nav-links {
+        display: flex;
+    }
+
+    .nav-links a {
+        width: 100%;
+        text-align: left;
+        padding: 1rem 1.5rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-links a:hover {
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    .logo {
+        margin-right: auto;
+        font-size: 1.2rem;
+        padding: 0.5rem 1rem;
+    }
+}
+
+/* ===== FIXES: readable nav on every page + working mobile menu ===== */
+header{background:rgba(0,33,71,.97);position:sticky;top:0}
+body.home header{position:fixed;background:transparent}
+body.home header.scrolled{background:rgba(0,33,71,.9)}
+.nav-links a:focus-visible,.hamburger:focus-visible{outline:2px solid var(--accent-color);outline-offset:3px}
+@media (max-width:768px){
+  .hamburger{position:absolute;top:50%;right:0;transform:translateY(-50%)}
+  header nav{position:relative}
+  #nav-toggle:checked ~ nav .nav-links{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:auto;width:100%;height:auto;background:rgba(0,33,71,.98);padding:.5rem 0;gap:0;z-index:1001}
+  #nav-toggle:checked ~ nav .nav-links li{width:100%}
+}

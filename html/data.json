@@ -1,0 +1,435 @@
+{
+  "governorates": [
+    {
+      "name": "Cairo",
+      "lat": 30.0444,
+      "lng": 31.2357,
+      "shortInfo": "The capital of Egypt.",
+      "description": "Cairo is Egypt's largest city, cultural and political center on the Nile, with a mix of modern life and ancient history.",
+      "attractions": [
+        "The Egyptian Museum (Tahrir)",
+        "The Citadel of Saladin",
+        "Al-Azhar Mosque and Al-Azhar University",
+        "Coptic Cairo (Hanging Church, Coptic Museum)",
+        "Cairo Tower"
+      ],
+      "hangouts": [
+        "Zamalek district (cafes & galleries)",
+        "Nile Corniche and dinner cruises",
+        "Khan El Khalili bazaar",
+        "Cafes in Downtown and Garden City",
+        "City Stars Mall"
+      ]
+    },
+    {
+      "name": "Giza",
+      "lat": 30.0131,
+      "lng": 31.2089,
+      "shortInfo": "Home of the Great Pyramids.",
+      "description": "Giza governorate includes the Giza Plateau with the Great Pyramids and the Sphinx, modern suburbs and important museums.",
+      "attractions": [
+        "Giza Plateau (Pyramids of Khufu, Khafre, Menkaure)",
+        "The Sphinx",
+        "Grand Egyptian Museum (GEM)",
+        "Saqqara and Step Pyramid of Djoser"
+      ],
+      "hangouts": [
+        "Pyramids view rooftop cafes",
+        "Mall of Egypt",
+        "6th of October City leisure areas"
+      ]
+    },
+    {
+      "name": "Alexandria",
+      "lat": 31.2001,
+      "lng": 29.9187,
+      "shortInfo": "Coastal city on the Mediterranean.",
+      "description": "Alexandria is a historic Mediterranean port city founded by Alexander the Great, mixing ancient sites and seaside culture.",
+      "attractions": [
+        "Bibliotheca Alexandrina",
+        "Qaitbay Citadel",
+        "Montaza Palace & Gardens",
+        "Roman Amphitheatre"
+      ],
+      "hangouts": [
+        "Alexandria Corniche",
+        "Stanley Bridge area",
+        "Seafood restaurants near the harbour",
+        "Cafes near the Corniche"
+      ]
+    },
+    {
+      "name": "Dakahlia",
+      "lat": 31.0409,
+      "lng": 31.3785,
+      "shortInfo": "Fertile Nile Delta governorate with Mansoura as a major city.",
+      "description": "Dakahlia is in the Nile Delta; Mansoura is the administrative capital with universities, markets and Nile-side life.",
+      "attractions": [
+        "Mansoura National Museum (local sites)",
+        "Traditional Delta villages and agricultural scenery"
+      ],
+      "hangouts": [
+        "Mansoura Corniche",
+        "Local cafes and university areas"
+      ]
+    },
+    {
+      "name": "Sharqia",
+      "lat": 30.5881,
+      "lng": 31.5013,
+      "shortInfo": "Large Nile Delta governorate east of Cairo.",
+      "description": "Sharqia (Ash Sharqiyah) is known for agricultural production, historic towns and close ties to Cairo and the Delta.",
+      "attractions": [
+        "Historic towns such as Zagazig (local museums)",
+        "Rural Delta landscapes"
+      ],
+      "hangouts": [
+        "Zagazig city center cafes",
+        "Local markets"
+      ]
+    },
+    {
+      "name": "Gharbia",
+      "lat": 30.7865,
+      "lng": 31.0004,
+      "shortInfo": "Delta governorate with Tanta as a cultural hub.",
+      "description": "Gharbia is centrally located in the Nile Delta; Tanta hosts important festivals and has a busy commercial life.",
+      "attractions": [
+        "Tanta's Sanabil and local historical mosques",
+        "Traditional Delta agriculture sites"
+      ],
+      "hangouts": [
+        "Tanta city cafes and markets",
+        "Local parks"
+      ]
+    },
+    {
+      "name": "Beheira",
+      "lat": 31.0415,
+      "lng": 30.4685,
+      "shortInfo": "Northwest Nile Delta governorate with coastal parts.",
+      "description": "Beheira includes agricultural lands and coastal areas near Alexandria and the Nile Delta waterways.",
+      "attractions": [
+        "Damanhur city - local markets",
+        "Coastal wetlands and small coastal towns"
+      ],
+      "hangouts": [
+        "Damanhur central cafes",
+        "Local seaside spots"
+      ]
+    },
+    {
+      "name": "Qalyubia",
+      "lat": 30.4563,
+      "lng": 31.1811,
+      "shortInfo": "Industrial and suburban governorate near Cairo.",
+      "description": "Qalyubia (Kalyubiya) lies on the Nile's eastern bank near Cairo, with many industrial towns and suburban communities.",
+      "attractions": [
+        "Local historical mosques and markets",
+        "Agricultural areas"
+      ],
+      "hangouts": [
+        "Banha city center",
+        "Suburban malls and cafes"
+      ]
+    },
+    {
+      "name": "Kafr El Sheikh",
+      "lat": 31.1111,
+      "lng": 30.9386,
+      "shortInfo": "Delta governorate known for rice and fisheries.",
+      "description": "Kafr El Sheikh is a productive agricultural region in the Nile Delta with coastal lagoons and rural tourism potential.",
+      "attractions": [
+        "Lake Burullus (coastal birdwatching and fishing)",
+        "Local delta towns"
+      ],
+      "hangouts": [
+        "Kafr El Sheikh city waterfront cafes",
+        "Fishing villages on the coast"
+      ]
+    },
+    {
+      "name": "Monufia",
+      "lat": 30.4583,
+      "lng": 31.0129,
+      "shortInfo": "Small, densely populated Delta governorate.",
+      "description": "Monufia (Menoufia) contains productive agricultural lands and important small cities with university presence.",
+      "attractions": [
+        "Local museums and historic religious sites",
+        "Rural scenery"
+      ],
+      "hangouts": [
+        "Shibin El Kom cafes and parks",
+        "University neighborhoods"
+      ]
+    },
+    {
+      "name": "Damietta",
+      "lat": 31.4167,
+      "lng": 31.8136,
+      "shortInfo": "Port city and governorate on the Mediterranean and at the Nile outlet.",
+      "description": "Damietta is known for its port, furniture industry, fresh seafood and coastal tourism.",
+      "attractions": [
+        "Damietta port and harbour",
+        "Local craft and furniture markets"
+      ],
+      "hangouts": [
+        "Seaside restaurants and fish markets",
+        "Corniche cafes"
+      ]
+    },
+    {
+      "name": "Port Said",
+      "lat": 31.2653,
+      "lng": 32.3019,
+      "shortInfo": "Port city at the northern entrance of the Suez Canal.",
+      "description": "Port Said overlooks the Mediterranean and marks the mouth of the Suez Canal; it has a distinctive cosmopolitan harbour culture.",
+      "attractions": [
+        "Port Said Military Museum",
+        "Suez Canal viewpoint areas",
+        "Historic colonial-era architecture on the corniche"
+      ],
+      "hangouts": [
+        "Port Said Corniche",
+        "Seafood restaurants and cafes"
+      ]
+    },
+    {
+      "name": "Suez",
+      "lat": 29.9668,
+      "lng": 32.5498,
+      "shortInfo": "City at the southern entrance of the Suez Canal.",
+      "description": "Suez governorate occupies the southern entrance to the Suez Canal; key for shipping and industrial activity.",
+      "attractions": [
+        "Suez Canal Museum and viewpoints",
+        "Industrial and maritime heritage sites"
+      ],
+      "hangouts": [
+        "Corniche and city cafes",
+        "Local markets"
+      ]
+    },
+    {
+      "name": "Ismailia",
+      "lat": 30.5965,
+      "lng": 32.2715,
+      "shortInfo": "Canal city mid-way along the Suez Canal.",
+      "description": "Ismailia is known for its green canalside parks, French-colonial heritage and role in Suez Canal history.",
+      "attractions": [
+        "Ismailia Museum",
+        "Suez Canal Authority gardens",
+        "Canalside promenades"
+      ],
+      "hangouts": [
+        "Canalside cafes and parks",
+        "Local seafood restaurants"
+      ]
+    },
+    {
+      "name": "Red Sea",
+      "lat": 27.2579,
+      "lng": 33.8116,
+      "shortInfo": "Coastal governorate famous for Red Sea resorts (Hurghada).",
+      "description": "Red Sea governorate stretches along Egypt's east coast and includes world-class diving, beaches and desert tourism.",
+      "attractions": [
+        "Hurghada resorts and diving sites",
+        "Marsa Alam diving and marine parks",
+        "Giftun Islands"
+      ],
+      "hangouts": [
+        "Hurghada Marina and beach clubs",
+        "Diving centres and seaside promenades"
+      ]
+    },
+    {
+      "name": "Matrouh",
+      "lat": 31.3540,
+      "lng": 27.2370,
+      "shortInfo": "Northwest coastal governorate with Mediterranean beaches.",
+      "description": "Matrouh governorate includes Mersa Matruh, popular for white-sand beaches, Roman and Pharaonic sites, and desert oases.",
+      "attractions": [
+        "Mersa Matruh beaches",
+        "Siwa Oasis (in the western desert region)",
+        "Roman archaeological remains"
+      ],
+      "hangouts": [
+        "Mersa Matruh Corniche",
+        "Beach resorts and seaside cafes"
+      ]
+    },
+    {
+      "name": "Aswan",
+      "lat": 24.0889,
+      "lng": 32.8998,
+      "shortInfo": "Southern Nile governorate known for Nubian culture.",
+      "description": "Aswan is famous for its Nile islands, Nubian villages, the High Dam and Philae Temple — a relaxed southern city.",
+      "attractions": [
+        "Philae Temple",
+        "Aswan High Dam",
+        "Elephantine Island",
+        "Unfinished Obelisk"
+      ],
+      "hangouts": [
+        "Nile felucca rides",
+        "Nubian village cafes",
+        "Corniche restaurants"
+      ]
+    },
+    {
+      "name": "Luxor",
+      "lat": 25.6872,
+      "lng": 32.6396,
+      "shortInfo": "Open-air museum of ancient Egypt.",
+      "description": "Luxor contains major ancient sites on both banks of the Nile, including Karnak, Luxor Temple and the Valley of the Kings.",
+      "attractions": [
+        "Karnak Temple Complex",
+        "Valley of the Kings",
+        "Luxor Temple",
+        "Hatshepsut Temple"
+      ],
+      "hangouts": [
+        "Nile corniche cafes",
+        "Local bazaars and Luxor souk",
+        "Nile dinner cruises"
+      ]
+    },
+    {
+      "name": "Qena",
+      "lat": 26.1615,
+      "lng": 32.7161,
+      "shortInfo": "Upper Egypt governorate near Luxor.",
+      "description": "Qena is an Upper Egyptian governorate featuring access to ancient temples and agricultural communities along the Nile.",
+      "attractions": [
+        "Dendera Temple (near Qena)",
+        "Traditional Upper Egyptian towns"
+      ],
+      "hangouts": [
+        "Qena city cafes and riverside areas",
+        "Local markets"
+      ]
+    },
+    {
+      "name": "Minya",
+      "lat": 28.0958,
+      "lng": 30.7508,
+      "shortInfo": "Upper Egyptian governorate with important archaeological sites.",
+      "description": "Minya and its governorate have Pharaonic and Greco-Roman remains, fertile Nile agriculture and strong local traditions.",
+      "attractions": [
+        "Beni Hasan tombs",
+        "Tuna el-Gebel necropolis",
+        "Ancient temples and archaeological sites"
+      ],
+      "hangouts": [
+        "Minya city riverfront",
+        "Local cafes and markets"
+      ]
+    },
+    {
+      "name": "Beni Suef",
+      "lat": 29.0663,
+      "lng": 31.0989,
+      "shortInfo": "Nile governorate south of Cairo.",
+      "description": "Beni Suef sits on the Nile with strong agricultural activity and local historical sites.",
+      "attractions": [
+        "Local archaeological sites and museums",
+        "Nile river scenery"
+      ],
+      "hangouts": [
+        "Beni Suef Corniche",
+        "City cafes"
+      ]
+    },
+    {
+      "name": "Faiyum",
+      "lat": 29.3090,
+      "lng": 30.8408,
+      "shortInfo": "Oasis-like governorate with lakes and ancient sites.",
+      "description": "Faiyum (Al Fayyum) is known for Lake Qarun, fertile wetlands, waterfalls at Wadi El Rayan and archaeological sites.",
+      "attractions": [
+        "Lake Qarun",
+        "Wadi El Rayan waterfalls and lakes",
+        "Ancient ruins and local pottery crafts"
+      ],
+      "hangouts": [
+        "Lakeside restaurants",
+        "Eco-tourism sites around Wadi El Rayan"
+      ]
+    },
+    {
+      "name": "Assiut",
+      "lat": 27.1783,
+      "lng": 31.1856,
+      "shortInfo": "Major Upper Egyptian city and governorate.",
+      "description": "Assiut is a historic Upper Egyptian center with nearby Pharaonic tombs and a strong local culture.",
+      "attractions": [
+        "Nearby Pharaonic and Coptic sites",
+        "Local museums"
+      ],
+      "hangouts": [
+        "Assiut city cafes and markets",
+        "Nile riverfront spots"
+      ]
+    },
+    {
+      "name": "Sohag",
+      "lat": 26.5560,
+      "lng": 31.6940,
+      "shortInfo": "Upper Egypt governorate with archaeological importance.",
+      "description": "Sohag contains ancient tombs, local monasteries and active agricultural communities along the Nile.",
+      "attractions": [
+        "Abydos (ancient temple complex nearby)",
+        "Local monasteries and archaeological sites"
+      ],
+      "hangouts": [
+        "Sohag city cafes",
+        "Local markets and riverfront"
+      ]
+    },
+    {
+      "name": "New Valley (Al Wadi Al Gedid)",
+      "lat": 25.4400,
+      "lng": 30.5500,
+      "shortInfo": "Vast desert governorate with oases.",
+      "description": "The New Valley governorate includes the Kharga Oasis and other desert oases, offering archeological sites and desert landscapes.",
+      "attractions": [
+        "Kharga Oasis museums and temples",
+        "Desert oases and caravan routes"
+      ],
+      "hangouts": [
+        "Kharga town local cafes",
+        "Oasis sightseeing spots"
+      ]
+    },
+    {
+      "name": "North Sinai",
+      "lat": 31.1289,
+      "lng": 33.7986,
+      "shortInfo": "Sinai governorate on the Mediterranean and Gulf approaches.",
+      "description": "North Sinai includes the coastal city of Al-Arish and has Mediterranean coastline, Bedouin cultural areas and border importance.",
+      "attractions": [
+        "Al-Arish beaches",
+        "Sinai coastal landscapes"
+      ],
+      "hangouts": [
+        "Al-Arish corniche",
+        "Local Bedouin markets"
+      ]
+    },
+    {
+      "name": "South Sinai",
+      "lat": 28.2124,
+      "lng": 33.6167,
+      "shortInfo": "Sinai governorate famous for Sharm El-Sheikh and St. Catherine.",
+      "description": "South Sinai is notable for Sharm El-Sheikh resorts, Ras Mohammed National Park and Mount Sinai (Jebel Musa).",
+      "attractions": [
+        "Sharm El-Sheikh beaches and diving",
+        "Ras Mohammed National Park",
+        "Saint Catherine's Monastery and Mount Sinai"
+      ],
+      "hangouts": [
+        "Sharm Marina and Naama Bay",
+        "Desert excursions and Bedouin camps"
+      ]
+    }
+  ]
+}

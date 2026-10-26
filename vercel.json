@@ -1,0 +1,42 @@
+{
+  "builds": [
+    {
+      "src": "html/**/*",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "project/**/*",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "photos/**/*",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "api/*.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/photos/(.*)",
+      "dest": "/photos/$1"
+    },
+    {
+      "src": "/project/(.*)",
+      "dest": "/project/$1"
+    },
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
+    },
+    {
+      "src": "/",
+      "dest": "/html/index.html"
+    },
+    {
+      "src": "/(.+)$",
+      "dest": "/html/$1"
+    }
+  ]
+}

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>About Us | Egypt Travel</title>
+    <link rel="stylesheet" href="nav.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: #f5f7fa;
+            color: #333;
+        }
+
+        /* HERO */
+        .hero {
+            height: 90vh;
+            background:
+                linear-gradient(rgba(0, 0, 0, .55), rgba(0, 0, 0, .55)),
+                url("../photos/LOGO.png");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding-top: 60px;
+            margin-bottom: 60px;
+            /* Offset for fixed nav */
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            letter-spacing: 3px;
+        }
+
+        .hero p {
+            font-size: 22px;
+            margin-top: 10px;
+        }
+
+        /* CONTAINER */
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 70px 20px;
+        }
+
+        /* SECTIONS */
+        .section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+
+        .section img {
+            width: 100%;
+            border-radius: 18px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, .15);
+        }
+
+        .section h2 {
+            color: #0f4c75;
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+
+        .section p {
+            font-size: 17px;
+            line-height: 1.9;
+        }
+
+        /* TEAM */
+        .team-title {
+            text-align: center;
+            font-size: 40px;
+            color: #0f4c75;
+            margin-bottom: 40px;
+        }
+
+        .team-container {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .team-card {
+            background: white;
+            width: 240px;
+            padding: 20px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+            transition: 0.3s;
+        }
+
+        .team-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .team-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .team-card h3 {
+            color: #203a43;
+            margin: 10px 0 5px;
+        }
+
+        .team-card p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #0f2027;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            font-size: 14px;           
+        }
+    </style>
+<meta name="description" content="ExoToura - Egypt tourism platform: tickets and packages, VR tours, accessibility support, volunteers and photography workshops.">
+<link rel="icon" type="image/png" href="../photos/LOGO.png">
+</head>
+
+<body>
+<header>
+    <input type="checkbox" id="nav-toggle">
+    <nav>
+                <div class="logo">ExoToura</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Company.html">Company</a></li>
+                    <li><a href="disabilty.html">Disability</a></li>
+                    <li><a href="volunteers.html">Volunteer</a></li>
+                    <li><a href="workshop.html">Workshops</a></li>
+                    <li><a href="vr.html">VR</a></li>
+                    <li><a href="library.html">Library</a></li>
+                    <li><a href="about_us.html">About</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="contact.html">Inquire</a></li>
+                    <li><a href="login.html" class="btn btn-secondary"
+                            style="padding: 8px 20px; font-size: 0.8rem;">Login</a></li>
+                </ul>
+            </nav>
+    <label for="nav-toggle" class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </label>
+</header>
+    <!-- HERO -->
+    <div class="hero">
+        <div>
+            <h1>ExoToura</h1>
+            <p>Discover the magic of Pharaonic Egypt</p>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <!-- WHO WE ARE -->
+        <div class="section">
+            <div>
+                <h2>Who We Are</h2>
+                <p>
+                    Our website idea is about tourism in Egypt and exploring its tourist attractions. We are a team of
+                    five people, each with a specific role based on their expertise. We have many features, such as the
+                    "Company" section, which is a part of the website dedicated to a company that books tickets for
+                    tours to Egyptian tourist sites. Tickets can be booked online, which reduces pressure on ticket
+                    counters at tourist attractions. Tourists simply show their ticket on their phone at the entrance
+                    and enter immediately. Another feature is VR (Virtual Reality), which is a paid feature. This makes
+                    it easier for tourists who find it difficult to travel or don't want to go out because of the heat.
+                    They can wear VR glasses and experience being at the location virtually, but through 3D glasses. We
+                    also have a feature for volunteers assisting people with disabilities. This is for people with
+                    special needs who want to visit tourist attractions in Egypt but are unable to do so independently.
+                    We provide them with a volunteer to assist them on their trip. However, before assigning a
+                    volunteer, we review their CV to ensure they are suitable to care for someone. Another feature is
+                    the "Workshop Place," where we dress tourists in traditional Egyptian clothing, similar to Nubian
+                    attire, and let them try their hand at Egyptian crafts, such as pottery making. In the future, we
+                    will create a page for "hidden gems" in Egypt, showcasing beautiful places that are not well-known.
+                    We will also create an interactive game for children, similar to a puzzle. When the child completes
+                    the puzzle, a tourist attraction in Egypt will appear with information about it in a cartoon format.
+                    We will also add a voice assistant for visually impaired people and create a completely offline
+                    program for tourism in Egypt. We are "Team ExoToura," and thank you.
+                </p>
+            </div>
+            <img src="../photos/download (1).png">
+        </div>
+
+        <!-- VISION -->
+        <div class="section">
+            <img src="../photos/about-vision.png">
+            <div>
+                <h2>Our Vision</h2>
+                <p>
+                    Our vision is to make tourism in Egypt accessible to everyone, regardless of their ability to travel
+                    or their financial situation. We believe that everyone should have the opportunity to experience the
+                    beauty of Egypt's tourist attractions, and we are committed to making this possible for all.
+                </p>
+            </div>
+        </div>
+
+        <!-- MISSION -->
+        <div class="section">
+            <div>
+                <h2>Our Mission</h2>
+                <p>
+                    Our mission is to ensure that every tourist, regardless of their financial means or physical
+                    abilities, can enjoy the beauty of Egypt's tourist attractions and not miss out on anything
+                    wonderful that Egypt has to offer.
+                </p>
+            </div>
+            <img src="../photos/disabilaty.png">
+        </div>
+
+        <footer>
+           © ExoToura Tourism
+        </footer>
+    <script src="script.js"></script>
+<script src="chatbot.js" defer></script>
+</body>
+
+</html>

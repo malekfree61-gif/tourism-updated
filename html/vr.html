@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>VR Experience - Exatoura</title>
+
+<link rel="stylesheet" href="nav.css">
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#f2f2f2;
+    color:#333;
+}
+
+.header{
+    background:#0c2340;
+    color:white;
+    text-align:center;
+    padding:40px 20px;
+}
+
+.header h1{
+    color:#d4af37;
+    margin-bottom:10px;
+}
+
+.header p{
+    margin:0;
+}
+
+.container{
+    width:90%;
+    max-width:1000px;
+    margin:auto;
+}
+
+.section{
+    background:white;
+    margin:30px 0;
+    padding:25px;
+    border-radius:10px;
+}
+
+.section h2{
+    color:#0c2340;
+    margin-bottom:15px;
+}
+
+.cards{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.card{
+    background:#f4e9d8;
+    padding:20px;
+    border-radius:10px;
+    flex:1 1 250px;
+    text-align:center;
+}
+
+.images{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+    margin-top:15px;
+}
+
+.images img{
+    width:48%;
+    border-radius:8px;
+}
+
+.card{
+    transition:transform 0.3s;
+}
+
+.card:hover{
+    transform:scale(1.05);
+}
+
+</style>
+<meta name="description" content="ExoToura - Egypt tourism platform: tickets and packages, VR tours, accessibility support, volunteers and photography workshops.">
+<link rel="icon" type="image/png" href="../photos/LOGO.png">
+</head>
+
+<body>
+
+ <header>
+        <input type="checkbox" id="nav-toggle">
+        <nav>
+                <div class="logo">ExoToura</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Company.html">Company</a></li>
+                    <li><a href="disabilty.html">Disability</a></li>
+                    <li><a href="volunteers.html">Volunteer</a></li>
+                    <li><a href="workshop.html">Workshops</a></li>
+                    <li><a href="vr.html">VR</a></li>
+                    <li><a href="library.html">Library</a></li>
+                    <li><a href="about_us.html">About</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="contact.html">Inquire</a></li>
+                    <li><a href="login.html" class="btn btn-secondary"
+                            style="padding: 8px 20px; font-size: 0.8rem;">Login</a></li>
+                </ul>
+            </nav>
+        <label for="nav-toggle" class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </label>
+    </header>
+
+<div class="header">
+    <h1>Virtual Reality Experience</h1>
+    <p>Explore Egypt using VR technology</p>
+</div>
+
+<div class="container">
+
+    <div class="section">
+        <h2>🌐 What is VR?</h2>
+        <p>
+            Virtual Reality allows users to explore places and experiences in a 3D digital world.
+            You can visit Egypt’s monuments without traveling.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>🎮 VR in Tourism</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>🏛️ Virtual Tours</h3>
+                <p>Walk inside pyramids and temples.</p>
+            </div>
+            <div class="card">
+                <h3>✈️ Preview Trips</h3>
+                <p>See destinations before visiting.</p>
+            </div>
+            <div class="card">
+                <h3>🌍 Remote Visits</h3>
+                <p>Explore hard-to-reach places.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>🏛️ Egyptian VR Places</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Giza Pyramids</h3>
+                <p>Discover the pyramids and sphinx.</p>
+            </div>
+            <div class="card">
+                <h3>Valley of Kings</h3>
+                <p>Explore ancient royal tombs.</p>
+            </div>
+            <div class="card">
+                <h3>Karnak Temple</h3>
+                <p>See temples in their old glory.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>🎓 Education & Health</h2>
+        <ul>
+            <li>Learning history in 3D</li>
+            <li>Easy access for disabled people</li>
+            <li>Stress relief VR experiences</li>
+        </ul>
+
+        <div class="images">
+            <img src="data:image/jpeg;base64,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">
+            <img src="https://images.unsplash.com/photo-1551818255-e6e10975bc17">
+        </div>
+    </div>
+
+</div>
+<footer>© ExoToura Tourism</footer>
+<script src="script.js"></script>
+<script src="chatbot.js" defer></script>
+</body>
+</html>
