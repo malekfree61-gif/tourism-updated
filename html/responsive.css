@@ -1,0 +1,297 @@
+html {
+    max-width: 100%;
+    overflow-x: clip;
+    scroll-padding-top: 80px;
+}
+
+body {
+    max-width: 100%;
+}
+
+img,
+video,
+iframe,
+svg {
+    max-width: 100%;
+}
+
+input,
+select,
+textarea,
+button {
+    max-width: 100%;
+}
+
+@media (min-width: 1201px) and (max-width: 1400px) {
+    header nav {
+        width: 100%;
+        padding: 0 16px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 33, 71, 0.98);
+        padding: 0.5rem 0;
+        gap: 0;
+        z-index: 1001;
+    }
+
+    #nav-toggle:checked ~ nav .nav-links {
+        display: flex;
+    }
+}
+
+@media (max-width: 768px) {
+    header nav {
+        width: 100%;
+        padding: 0 16px;
+    }
+
+    header .logo {
+        padding-left: 0;
+        font-size: 1.15rem;
+    }
+
+    header .hamburger {
+        padding: 12px;
+        margin: 0;
+    }
+
+    .container,
+    .library {
+        width: calc(100% - 32px);
+    }
+
+    main {
+        max-width: calc(100% - 32px);
+    }
+
+    section,
+    .section {
+        padding: 40px 0;
+    }
+
+    .hero {
+        height: auto;
+        min-height: 55vh;
+        padding: 48px 16px;
+        background-attachment: scroll;
+    }
+
+    .home .hero {
+        min-height: 80vh;
+        padding: 100px 0 48px;
+    }
+
+    .hero h1,
+    .company-header h1 {
+        font-size: clamp(2rem, 9vw, 3rem);
+        line-height: 1.15;
+    }
+
+    .hero p,
+    .company-header p {
+        font-size: clamp(1rem, 4.5vw, 1.25rem);
+    }
+
+    .section-header h2,
+    .section-title,
+    .about-text h2 {
+        font-size: clamp(1.6rem, 7vw, 2.25rem);
+    }
+
+    .about-grid,
+    .about-content,
+    .services-grid,
+    .packages-grid,
+    .testimonials-grid,
+    .destination-grid,
+    .features-grid,
+    .footer-grid,
+    .team-container,
+    .governorates-grid,
+    .section,
+    .cards {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .about-grid,
+    .about-content {
+        gap: 28px;
+    }
+
+    .about-grid,
+    .about-content,
+    .services-grid,
+    .packages-grid,
+    .testimonials-grid,
+    .destination-grid,
+    .features-grid,
+    .footer-grid,
+    .team-container,
+    .governorates-grid,
+    .cards,
+    .workshop,
+    .images,
+    .image-box {
+        min-width: 0;
+    }
+
+    .workshop {
+        flex-direction: column;
+        padding: 16px;
+    }
+
+    .image-box {
+        width: 100%;
+        flex-basis: auto;
+    }
+
+    .image-box img {
+        height: auto;
+        max-height: 220px;
+        object-fit: cover;
+    }
+
+    .images img {
+        width: calc(50% - 8px);
+    }
+
+    .card,
+    .package-card,
+    .service-card,
+    .testimonial-card,
+    .feature-card {
+        min-width: 0;
+    }
+
+    .card-content,
+    .package-content {
+        padding: 20px;
+    }
+
+    .company-header,
+    .header {
+        padding: 40px 16px;
+    }
+
+    .section,
+    main,
+    .login-container {
+        padding: 20px;
+    }
+
+    .login-container {
+        width: calc(100% - 32px);
+        max-width: 400px;
+        margin: 32px auto;
+    }
+
+    body:has(.login-container) {
+        min-height: 100vh;
+    }
+
+    body:has(.login-container) header {
+        position: sticky;
+    }
+
+    .contact .card,
+    form.card,
+    .contact-form,
+    .volunteer-form,
+    .request-box {
+        width: 100%;
+    }
+
+    body:has(form.card) {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    body:has(form.card) .container {
+        padding: 24px 0;
+    }
+
+    table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    th,
+    td {
+        padding: 10px 12px;
+    }
+
+    #map {
+        height: min(65vh, 480px);
+    }
+
+    .btn,
+    button {
+        max-width: 100%;
+    }
+
+    .hero-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .hero-buttons .btn {
+        padding: 14px 20px;
+    }
+
+    footer {
+        padding: 28px 16px;
+    }
+}
+
+@media (max-width: 420px) {
+    .container,
+    .library {
+        width: calc(100% - 24px);
+    }
+
+    main {
+        max-width: calc(100% - 24px);
+    }
+
+    .section,
+    main,
+    .login-container {
+        padding: 16px;
+    }
+
+    .images img {
+        width: 100%;
+    }
+
+    .feature-list li {
+        align-items: flex-start;
+    }
+}
